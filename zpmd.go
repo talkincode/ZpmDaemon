@@ -94,6 +94,7 @@ func Notify(c echo.Context) error {
 	return c.JSON(http.StatusOK, map[string]interface{}{"code": 0})
 }
 
+
 func main() {
 
 	if *install {

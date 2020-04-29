@@ -110,6 +110,7 @@ func main() {
 
 		ticker := time.NewTicker(time.Second *time.Duration(*seconds))
 		for t := range ticker.C {
+			log.Println("bin/bash ", *task)
 			err := exec.Command("/bin/bash", *task).Run()
 			if err != nil {
 				log.Printf("%d Task run error, %s",t, err.Error())
